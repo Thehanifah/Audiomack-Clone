@@ -1,0 +1,882 @@
+:root {
+  --font-base: "Open Sans", sans-serif;
+  --font-h1: 40px;
+  --font-h2: 33px;
+  --font-h3: 28px;
+  --font-h4: 24px;
+  --font-h5: 19px;
+  --font-h6: 16px;
+  --font-p: 14px;
+  --font-accent: 13px;
+  --font-caption: 12px;
+  --font-small: 11px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 800;
+  --letter-spacing-regular: -0.5px;
+  --letter-spacing-wide: -1px;
+  --letter-spacing-wider: -1.5px;
+  --line-height-regular: 20px;
+  --line-height-wide: 33px;
+  --line-height-wider: 54px;
+  --text-black: #171717;
+  --text-gray: #ccc;
+  --text-gray-light: #cacaca;
+  --text-white: #fff;
+  --primary-theme: #ffa200;
+  --primary-red: #d41a00;
+  --primary-theme-background: #0d0d0d;
+  --primary-white: #fff;
+  --primary-dark: #1c1c1c;
+  --deep-black: #1a1a1a;
+  --gray-lighter: #333;
+  --gray-light: #222;
+  --gray-lightest: #ccc;
+  --gray: #999;
+  --border-gray: #ffffff1a;
+  --border-hover: #666;
+  --am-labs-vh: 100vh;
+  --nav-height: 83px;
+  --player-height: 90px;
+}
+
+body {
+  background-color: rgba(13, 13, 13, 255);
+  font-family: "Open Sans", sans-serif;
+  margin: 0%;
+  padding: 0%;
+  width: 100vw;
+}
+
+#container {
+  background-color: #0d0d0d;
+  border: solid 1px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(20, 1fr) minmax(auto, auto);
+  grid-template-rows: repeat(8);
+  grid-auto-rows: minmax(80px, auto);
+}
+
+nav {
+  grid-column: 1/21;
+  border-bottom: #333 solid 1px;
+}
+
+header {
+  grid-column: 2/20;
+  grid-row: 2/5;
+}
+
+.aside-container {
+  grid-column: 2/6;
+  grid-row: 5/10;
+  max-width: fit-content;
+  box-sizing: border-box;
+  max-height: 900px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.aside-container::-webkit-scrollbar {
+  background-color: #0d0d0d;
+  width: 10px;
+  max-height: 50px;
+}
+
+.aside-container::-webkit-scrollbar-thumb {
+  background-color: #0d0d0d;
+  border-radius: 20px;
+  height: 20px;
+}
+.aside-container::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+article {
+  grid-column: 6/20;
+  grid-row: 5/10;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.footercontainer {
+  grid-column: 1/21;
+  grid-row: 5/12;
+  padding-bottom: 80px;
+  background-color: rgba(18, 18, 18, 255);
+}
+
+.h-h3 {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 26px;
+}
+
+.h-h5 {
+  color: #ffa200;
+}
+.headercontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  width: 1050px;
+}
+/* paragraph styling here */
+.p1,
+.p2,
+.p3 {
+  color: #fff;
+  align-self: center;
+  margin-top: 0.3px;
+  margin-bottom: 0.3px;
+}
+
+.p2 {
+  /* Styles for the second paragraphs in each section*/
+  font-weight: bold;
+}
+
+.p3 {
+  color: #ffa200;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+span {
+  color: #fff;
+}
+
+/* styles for the sections starts here */
+section {
+  padding-top: 30px;
+}
+
+/* parent divs of trending songs section */
+.trendingsongsdiv {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.trendingalbumsdiv {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.topalbumsinnigriadiv {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+/* the styling for the z -index of the TRENDING ALBUM starts here */
+
+.indexcontainer {
+  position: relative;
+}
+
+.blackbox {
+  background-color: #333;
+  width: 220px;
+  height: 190px;
+  position: absolute;
+  z-index: 1;
+  right: -8px;
+  margin-top: 20px;
+}
+
+.greybox {
+  background-color: #666;
+  width: 230px;
+  height: 210px;
+  position: absolute;
+  z-index: 2;
+  right: -4px;
+  margin-top: 10px;
+}
+.mainbox {
+  z-index: 3;
+  position: relative;
+}
+
+/* the styling for the z -index of the TRENDING ALBUM ends here */
+
+/* TOP AUDIOMACK PLAYLIST section is styled here */
+.topaudiomackplaylistsdiv {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+/* paragraphs of the section is styled here */
+
+.p11,
+.p22 {
+  color: #fff;
+  margin-top: 0.3px;
+  margin-bottom: 0.3px;
+}
+.p11 {
+  font-weight: bold;
+}
+
+.p22 {
+  color: gray;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+/* the div that contains the image and text is styled here */
+
+.tapdiv {
+  text-align: left;
+  padding-top: 20px;
+}
+
+/* Z index styling is here */
+
+.indexcontainer1 {
+  position: relative;
+}
+
+.blackbox1 {
+  background-color: #333;
+  width: 180px;
+  height: 150px;
+  position: absolute;
+  z-index: 1;
+  top: -12px;
+  margin-left: 20px;
+}
+
+.greybox1 {
+  background-color: #666;
+  width: 210px;
+  height: 230px;
+  position: absolute;
+  z-index: 2;
+  top: -6px;
+  margin-left: 10px;
+}
+.mainbox1 {
+  z-index: 3;
+  position: relative;
+}
+/* z index styling ends for the top audiomack playlist ends  here */
+
+.topsongsinnigeriadiv {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.topalbumsinnigeriadiv {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.topaudiomackplaylistsdiv {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.audiomackworlddiv {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+/* Audio mack wold paragraphs and texts are styled here */
+
+.p111,
+.p222 {
+  color: #fff;
+  margin-top: 0.3px;
+  margin-bottom: 0.3px;
+  padding-top: 12px;
+  margin-left: 15px;
+}
+
+.p111 {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.p222 {
+  color: gray;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+
+.p111:hover {
+  color: #ffa200;
+  text-decoration: underline;
+}
+
+.mostsupportedprojectsdiv {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  gap: 16px;
+  overflow: hidden;
+}
+.icondiv {
+  position: absolute;
+  margin: 10px;
+  background-color: #333;
+  padding: 10px;
+  font-size: small;
+  font-weight: 600;
+  border-radius: 30px;
+  width: fit-content;
+  color: white;
+  display: flex;
+}
+.iconimg {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.iconp {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 3px;
+}
+
+.recentlysupporteddiv {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.recentlyaddeddiv {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  gap: 16px;
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+
+/* top songs and top album  divs containing text  are styled here */
+.h-littlediv {
+  text-align: center;
+}
+
+.p11:hover {
+  color: #ffa200;
+}
+
+.p1:hover {
+  color: #ffa200;
+}
+
+.p2:hover {
+  color: #ffa200;
+}
+
+a {
+  text-decoration: none;
+}
+
+.p22:hover {
+  color: gray;
+}
+
+/* footer styling begins here */
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0%;
+}
+
+.main-logo {
+  width: 103px;
+  height: 72px;
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+
+.social-icons {
+  margin: 20px;
+  padding-top: 20px;
+}
+.fa-brands {
+  padding: 15px;
+  margin: 0%;
+}
+
+.footer-nav {
+  margin: 0px;
+  text-transform: uppercase;
+  margin: 0%;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  font-weight: 900;
+  margin: 0%;
+}
+
+.policy {
+  display: flex;
+  flex-direction: row;
+  margin: 0%;
+}
+
+.policy a {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: 800;
+  margin: 0%;
+}
+
+.footerh5 {
+  text-align: center;
+  font-weight: 800;
+  margin: 0%;
+}
+
+.footerp {
+  margin: 0;
+}
+
+.footerp2 {
+  text-decoration: none;
+  padding: 10px;
+  opacity: 70%;
+  text-align: center;
+  color: #fff;
+  margin: 0%;
+}
+
+.footerp3 {
+  text-decoration: none;
+  padding: 10px;
+  opacity: 70%;
+  text-align: center;
+  color: #fff;
+  margin: 0%;
+}
+
+.footer-buttons {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 30px;
+  margin: 0%;
+}
+
+button {
+  background-color: #0d0d0d;
+  border-radius: 15px;
+  border: 1px solid white;
+  height: auto;
+  width: auto;
+  padding: 13px;
+  cursor: pointer;
+  color: white;
+  margin: 0%;
+}
+button:hover {
+  background-color: #0d0d0d;
+  border-radius: 15px;
+  border: 1px solid #ffa200;
+  height: auto;
+  width: auto;
+  padding: 13px;
+  cursor: pointer;
+  color: #ffa200;
+  margin: 0%;
+}
+
+.button-img {
+  width: 42px;
+  height: 30px;
+  margin: 0%;
+}
+
+.Audiomack {
+  text-decoration: none;
+  opacity: 50%;
+  margin: 0%;
+}
+
+.button-f {
+  display: flex;
+  margin: 0%;
+}
+.button-text {
+  text-align: left;
+  padding-left: 10px;
+  margin: 0%;
+}
+
+.button-text h4 {
+  font-size: 19px;
+  margin: 0%;
+}
+/* Aside styling starts here */
+.j-h5 {
+  color: #ffa202e6;
+  font-weight: 800;
+  line-height: 1.3;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  margin-left: 13px;
+}
+.j-section {
+  padding-top: 10px;
+}
+.j-phome {
+  color: #ccc;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  width: 280px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-left: 13px;
+}
+
+.j-divp {
+  background-color: #333;
+  height: 40px;
+  width: 280px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.j-p1 {
+  color: #ccc;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  width: 100%;
+  cursor: pointer;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  white-space: nowrap;
+  margin-left: 13px;
+}
+.j-p1:hover {
+  color: #ffa202e6;
+}
+
+.j-btn {
+  border: 0.5px solid #666;
+  border-radius: 40px;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 10px;
+  font-weight: 600;
+}
+.j-btn:hover {
+  border: 2px solid #999;
+  border-radius: 40px;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.j-aside {
+  opacity: 1;
+  transform: none;
+}
+.horiz-line {
+  border-bottom: 0.5px solid #666;
+  width: 100%;
+  white-space: nowrap;
+}
+/* header/hero page styling starts here */
+.hero-image {
+  flex: 1;
+  height: 273px;
+  background-image: url(./download.jfif);
+  background-size: auto;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.wrap-heropage {
+  margin-top: 20px;
+}
+
+*/ .hero-h1 {
+  font-size: 500px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
+
+.hero-p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 300;
+  /* text-size: 50px; */
+  text-align: center;
+  font-weight: 700;
+}
+
+.orange-btn {
+  background-color: #ffa200;
+  color: #0d0d0d;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 150px;
+  font-size: 1.1em;
+  cursor: pointer;
+  font-weight: bold;
+  font-weight: 700;
+}
+
+.orange-btn:hover {
+  background-color: #e69305;
+  color: #0d0d0d;
+  font-weight: bold;
+  font-weight: 700;
+  border-radius: 150px;
+  padding: 15px 20px;
+}
+
+.hero-page {
+  display: flex;
+  background-color: #1d1d1d;
+  height: 270px;
+}
+
+.hero-image {
+  display: flex;
+}
+
+.hero-message-b {
+  flex: 60%;
+  background-color: #0d0d0d;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* nav bar styling starts here */
+.upload-text {
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-1 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  height: 60px;
+}
+.dividerone {
+  height: 15px;
+  border-left: 1px solid rgba(136, 136, 133, 0.133);
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.nav-q {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-right: 50px;
+}
+
+.nav-q li {
+  margin-right: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff; /* Change the color as needed */
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffa200; /* Change the background color on hover as needed */
+}
+
+.left-section,
+.center-section,
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 2px;
+}
+
+.brand,
+.get-plus {
+  margin-right: 10px;
+}
+
+.search-box {
+  width: 250px;
+  background-color: #333;
+  border: none;
+}
+
+.search-box:hover {
+  width: 250px;
+  background-color: #333;
+  border: none;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+.search-text {
+  margin-right: 10px;
+}
+
+.get-plus {
+  font-size: small;
+  font-weight: 600;
+}
+
+.get-plus:hover {
+  color: #ffa200;
+  cursor: pointer;
+}
+.get-plus::after {
+  content: "+";
+  color: #ffa200;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.brand:hover {
+  cursor: pointer;
+}
+
+.divider {
+  height: 15px;
+  border-left: 1px solid #ffa200;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.download-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 20px;
+  margin-left: 420px;
+}
+
+.search-icon {
+  color: #ffa200;
+  margin-right: 2px;
+}
+.search-icon {
+  color: #ffa200;
+  margin-right: 15px;
+}
+
+.upload-icon {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #ffa200;
+}
+
+.nav-link,
+.create-account,
+.sign-in {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link:hover,
+.create-account:hover,
+.sign-in:hover {
+  color: #ffa200;
+}
+
+.search-container {
+  display: flex;
+  width: 300px;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.account-section {
+  display: flex;
+  margin-right: 180px;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  line-height: 35px;
+}
+
+.create-account,
+.sign-in {
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.create-account:hover,
+.sign-in:hover {
+  color: #ffa200;
+}

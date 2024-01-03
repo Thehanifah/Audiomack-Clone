@@ -1,0 +1,134 @@
+body{
+    background-color: black;
+    color: #cacaca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: "Open Sans",sans-serif;
+    padding-top: 40px; 
+
+}
+ .Scontainer{ 
+    position: relative;
+    width: 440px;
+    height: 100%;
+    background: transparent;
+    border: 0 solid black;
+    background-color: #1c1c1c;
+    border-radius: 5px;
+    padding-top: 30px;
+
+} 
+.Sheading{
+    text-align: center;
+    font-size: 14px;
+    line-height: 0.6;
+    font-weight: 700;
+    
+}
+.Scontent{
+    padding: 0 30px;
+}
+.red{
+    color: #c25351;
+}
+ul{
+    column-count: 2;
+    color: orange;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+li a{
+    color: white;
+}
+.Srobot{
+    display: grid;
+    place-items: center;
+}
+.Send{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+.end span{
+    color: orange;
+    cursor: pointer;
+}
+button{
+    width: fit-content;
+    height: 50px;
+    border-radius: 20px;
+    background-color: orange;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px;
+    color: #0d0d0d;
+    padding: 16px 30px;
+    font-size: 15px;
+}
+input{
+    width: 330px;
+    height: 45px;
+    background-color: #222;
+    border: 2px ;
+    border-radius: 4px;
+    font-size: 14px;
+    caret-color: white;
+    font-weight: 700;
+    padding-left: 10px; 
+    color: white;
+}
+.Screate{
+    font-size: 14px;
+    font-weight: 700;
+}
+.Spass{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* password eye icon */
+.password-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+ .eye-icon { 
+    width: 20px;
+    height: 20px;
+} 
+.TT {
+    color:#ffa200 ;
+    cursor: pointer;
+}
+
+#passwordCheckbox {
+    display: none;
+}
+
+#passwordCheckbox:checked + .password-input {
+    padding-right: 30px;
+    background-image: url('hide.png');
+}
+
+#passwordCheckbox:checked + .password-input + .toggle-password .eye-icon {
+    background-image: url('show.png'); 
+}
+
+.eye-icon {
+    display: inline-block;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
